@@ -1,12 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="en-US">
 <head>
 	<meta charset="UTF-8">
+	<title>CSS Cube Test</title>
 	<link rel="stylesheet" href="style.css">
-	<title>Document</title>
 </head>
 <body>
-	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit cum placeat nisi debitis, nihil minus blanditiis ut culpa impedit, magni, quia delectus explicabo libero alias itaque velit, optio molestiae esse.
+	<div id="wrapper">
+		<div id="cube">
+			<div class="side" id="side1">1</div>
+			<div class="side" id="side2">2</div>
+			<div class="side" id="side3">3</div>
+			<div class="side" id="side4">4</div>
+			<div class="side" id="side5">5</div>
+			<div class="side" id="side6">6</div>
+		</div>
 	</div>
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+	<script>
+		$(function(){
+			$(document).mousemove(function(e){
+				$('#cube').css({
+					'-webkit-transform':'rotateX('+e.pageY+'deg) rotateY('+e.pageX+'deg)'
+				});
+			});
+		});
+	</script>
+
 </body>
 </html>
